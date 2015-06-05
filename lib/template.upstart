@@ -7,9 +7,9 @@ stop on runlevel [06]
 script
   CMD="{command}"
   DAEMON_USER="{user}"
-  SERVICE="/usr/local/lib/quichean/${{DAEMON_USER}}/${service}"
+  SERVICE="/usr/local/lib/quichean/$DAEMON_USER/${service}"
   DAEMON_MGR="start-stop-daemon"
-  PIDFILE="/var/run/${{DAEMON_USER}}.pid"
+  PIDFILE="/var/run/$DAEMON_USER.pid"
 
   exec $DAEMON_MGR --start \
     --chuid $DAEMON_USER:$DAEMON_USER \

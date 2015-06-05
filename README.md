@@ -14,7 +14,8 @@ Usage
         daemonSetup.init({
             user: 'myservice',
             service: 'lib/start.js',
-            command: 'node'
+            command: 'node',
+            pathToFiles: path.join(__dirname, '..')
             // other optional parameters
         });
        
@@ -27,6 +28,12 @@ Usage
     should be a path such as `lib/start.js` relative to the root of
     the directory into which the service files are copied, namely
     `/usr/local/lib/quichean/myservice/`.
+-   `pathToFiles`: Absolute path to root of directory from which all files
+    will be copied into the directory which will contain the files used by 
+    the daemon service. For node daemons, the path will normally
+    be the root of the service. For Python daemons, the required
+    files should be placed in a separate `src` directory, and the value
+    of `pathToFiles` should be something like `path.join(__dirname, '../src')`.
 
 #### Optional configuration parameters
 -   `command`: Executable command for starting the service. If no value

@@ -1,4 +1,4 @@
-# Ubuntu upstart file at /etc/init/quotepuller.conf
+# Ubuntu upstart file at /etc/init/{user}.conf
 # Cf. https://github.com/mongodb/mongo/blob/master/debian/mongod.upstart
 
 start on runlevel [2345]

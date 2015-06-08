@@ -43,6 +43,11 @@ Usage
         python
         /var/local/.virtualenvs/myservice/bin/python
 
+-   `noupstart`: If set to `true`, no upstart file will be written.
+    This option is mainly provided for use during development. Once
+    a dependent service is working, it should normally start if the
+    server is restarted. But you may not want this behavior while the
+    service is being developed.
 
 Testing
 ---

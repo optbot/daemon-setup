@@ -25,7 +25,7 @@ Usage
     create this user and group and will use this name when creating the log
     directory and the path to the executable service files.
 -   `service`: Argument to be passed to `command`. This argument
-    should be a path such as `lib/start.js` relative to the root of
+    should be a path such as `lib/start.js` *relative* to the root of
     the directory into which the service files are copied, namely
     `/usr/local/lib/quichean/myservice/`.
 -   `pathToFiles`: Absolute path to root of directory from which all files
@@ -43,11 +43,11 @@ Usage
         python
         /var/local/.virtualenvs/myservice/bin/python
 
--   `noupstart`: If set to `true`, no upstart file will be written.
+-   `upstart`: If set to `false`, no upstart file will be written.
     This option is mainly provided for use during development. Once
     a dependent service is working, it should normally start if the
     server is restarted. But you may not want this behavior while the
-    service is being developed.
+    service is being developed. Defaults to `true`.
 
 Testing
 ---
